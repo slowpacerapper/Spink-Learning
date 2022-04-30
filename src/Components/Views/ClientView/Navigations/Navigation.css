@@ -1,0 +1,132 @@
+.navigation__bar {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 0 2rem;
+  border-right: 1px solid var(--secondary-color);
+  overflow: hidden;
+}
+
+.navigation__bar::-webkit-scrollbar {
+  display: none;
+}
+
+.navigation__bar .head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navigation__bar a,
+#course {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.navigation__bar a:hover,
+.navigation__bar a:active,
+.navigation__bar a:focus {
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  color: var(--primary-color);
+}
+
+.navigation__bar a span > *,
+#course span > * {
+  stroke: var(--secondary-color);
+  color: var(--secondary-color);
+  fill: var(--secondary-color);
+}
+
+.navigation__bar a:hover span > *,
+.navigation__bar a:active span > *,
+.navigation__bar a:focus span > * {
+  fill: var(--primary-color);
+  color: var(--primary-color);
+  stroke: var(--primary-color);
+}
+
+.navigation__bar form {
+  position: relative;
+  border-radius: 30px;
+  border: 1px solid var(--secondary-color);
+}
+
+.navigation__bar form input {
+  background-color: transparent;
+  width: 90%;
+  height: 2rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  color: var(--secondary-color);
+}
+
+.navigation__bar form input::placeholder {
+  color: var(--secondary-color);
+}
+
+.navigation__bar form button {
+  background-color: transparent;
+  border: none;
+  margin-left: -1.7rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
+}
+
+.navigation__bar form button > * {
+  fill: var(--secondary-color);
+}
+
+.navigation__bar ul {
+  list-style-type: none;
+}
+.navigation__bar .body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navigation__bar .join__a__class a[href="#join"] {
+  background-color: var(--secondary-color);
+  border-radius: 30px;
+  color: var(--primary-color);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.navigation__bar .join__a__class a[href="#join"] > span * {
+  fill: var(--primary-color);
+}
+
+.navigation__bar .courses ul,
+.join__a__class ul {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+  padding-left: 1.85rem;
+}
+
+.navigation__bar .courses,
+.navigation__bar .join__a__class {
+  display: flex;
+  flex-flow: column;
+  gap: 0.65rem;
+}
+
+.navigation__bar .foot h3 {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}

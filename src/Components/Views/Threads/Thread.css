@@ -1,0 +1,125 @@
+.threads {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  max-height: 700px;
+  overflow: auto;
+  align-items: center;
+  padding: 1rem;
+}
+
+.threads .create__thread {
+  position: fixed;
+  top: 5.5rem;
+  width: 40%;
+  min-width: 200px;
+  background-color: var(--secondary-color);
+  height: 3rem;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  border: 5px solid var(--primary-color);
+}
+
+.threads::-webkit-scrollbar {
+  display: none;
+}
+
+.threads .create__thread span > * {
+  fill: var(--primary-color);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.threads .create__thread span > *:hover {
+  transform: scale(0.9);
+}
+
+.threads .create__thread span {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+}
+
+.threads .new__thread {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  height: 0vh;
+  width: 0vw;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  transition: all 0.4s ease-in-out;
+}
+
+.threads .new__thread.expand {
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+.threads .new__thread form {
+  background-color: var(--secondary-color);
+  max-width: 500px;
+  padding: 1rem;
+  position: fixed;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: inherit;
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.threads .new__thread form input,
+.threads .new__thread form textarea {
+  background-color: transparent;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  outline: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.threads .new__thread form button {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  color: var(--primary-color);
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.threads .new__thread form button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.threads .new__thread form textarea {
+  resize: none;
+  min-height: 10rem;
+}
+
+.threads .new__thread form input::placeholder,
+.threads .new__thread form textarea::placeholder {
+  color: var(--primary-color);
+}
+
+.my__threads {
+  padding: 2rem 0;
+  display: flex;
+  flex-flow: column;
+  gap: 0.75rem;
+}
